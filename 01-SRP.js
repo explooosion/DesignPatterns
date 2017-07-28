@@ -1,5 +1,7 @@
 // 單一職責原則 Single Responsibility Principle（SRP）
 
+"use strict";
+
 // Action
 class IConnectionManager {
 
