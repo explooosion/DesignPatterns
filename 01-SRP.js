@@ -1,10 +1,12 @@
 // 單一職責原則 Single Responsibility Principle（SRP）
+/**
+ * 電話的操作與資料傳輸應分開，個別職責。
+ */
 
 "use strict";
 
 // 動作
 class IConnectionManager {
-
     dial(phoneNumber) {
         console.log(`call number ${phoneNumber}`);
         return phoneNumber;
@@ -17,7 +19,6 @@ class IConnectionManager {
 
 // 傳輸資料
 class IDataTransfer {
-
     sendData(cm) {
         console.log(`sending data: ${cm}`);
     }

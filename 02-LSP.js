@@ -1,4 +1,8 @@
 // 里氏替換原則 Liskov Substituion Principle（LSP）
+/**
+ * 子類別可繼承父類別，
+ * 在同父類別不同子類情況下，任意替換子類別是不受影響的。
+ */
 
 "use strict";
 
@@ -40,10 +44,8 @@ class AUG extends Rifle {
     }
 }
 
-
 // 士兵
 class Soldier {
-
     constructor() {
         this.gun = new AbstractGun();
     }
@@ -58,20 +60,16 @@ class Soldier {
 
 // 狙擊手
 class Snipper {
-
     constructor() {
         this.gun = new Rifle();
     }
-
     setRifle(_rifle) {
         this.gun = _rifle;
     }
-
     killEnemy() {
         this.gun.zoomOut();
         this.gun.shoot();
     }
-
 }
 
 let Robby = new Soldier();
