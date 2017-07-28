@@ -2,7 +2,7 @@
 
 "use strict";
 
-// Action
+// 動作
 class IConnectionManager {
 
     dial(phoneNumber) {
@@ -15,7 +15,7 @@ class IConnectionManager {
     }
 }
 
-// Send Data
+// 傳輸資料
 class IDataTransfer {
 
     sendData(cm) {
@@ -23,7 +23,7 @@ class IDataTransfer {
     }
 }
 
-// Phone
+// 手機
 class Phone {
     constructor(cm, dt) {
         this.ConnectionManager = cm;
@@ -31,6 +31,7 @@ class Phone {
     }
 }
 
+// 實體化一支手機 iphone
 const iphone = new Phone(
     new IConnectionManager(),
     new IDataTransfer()
